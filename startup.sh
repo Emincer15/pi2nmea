@@ -1,4 +1,4 @@
 #! /bin/bash
 cd /home/pi2nmea/software/pi2nmea
-source .venv/bin/activate
+source .venvpi/bin/activate
 python3 rbmq_receive.py
