@@ -1,4 +1,4 @@
-#!/Users/etanmincer/AIS/.venv/bin/python3
+#!/Users/etanmincer/Documents/AISrepl/pi2nmea/.venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
