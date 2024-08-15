@@ -32,8 +32,6 @@ def on_message_received(ch, method, properties, body):
     # print(f"received new message: {body}")
     # do some work, send nmea broadcast
     lat,lon=functions.getlatlon(body)
-    print(lat)
-    print(lon)
     message=functions.createmessage(lat,lon)
     functions.sendmessage(message)
     # # acknowledge msg on succe, uncomment for debugging so you can read the same message again and again
