@@ -49,7 +49,7 @@ def createmessage(lat,lon):
 
 
 def sendmessage(sending):
-    ser=serial.Serial('ttyS0',4800)
-    ser.write((bytes(sending[0]+"\r\n")))#I think these are right carriage returns. I don't know.
-    print(bytes(sending[0]+'/r/n','utf-8'))
+    ser=serial.Serial('/dev/ttyS0',4800)
+    ser.write((bytes(sending[0]+"\r\n",'utf-8')))#I think these are right carriage returns. I don't know.
+    #print(bytes(sending[0]+'/r/n','utf-8'))
 # testsend=sendmessage(['!AIVDM,1,1,,A,E>kDSpf;T0V2P000000000000001P8F0<12h7wwwwp000000000000000000,4*67'])
