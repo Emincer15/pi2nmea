@@ -1,0 +1,44 @@
+to enable serial on py. only need to do once:
+sudo raspi-config
+
+
+supervisord instructions:
+
+sudo nano /etc/supervisor/conf.d/your_script.conf
+(do it in git, not in /etc folder)
+
+in file: 
+
+[supervisord]
+logfile=/var/log/supervisor/supervisord.log logfile_maxbytes=50MB ;
+logfile_backups=10 ; 
+loglevel=info ; 
+pidfile=/var/run/supervisord.pid ;
+nodaemon=false ; 
+minfds=1024 ; 
+minprocs=200 ; 
+childlogdir=/var/log/supervisor/ 
+
+[program:your_script]
+command=/path/to/your_script.sh autostart=true
+(make command a bash command to activate bash file and run it)
+directory=/path/to/your/working_directory
+autorestart=true
+stderr_logfile=/var/log/your_script.err.log stdout_logfile=/var/log/your_script.out.log
+
+
+sudo nano /etc/systemd/system/supervisord.service
+
+[Unit]Description=Supervisor process control system for UNIX Documentation=http://supervisord.org 
+After=network.target [Service]
+ExecStart=/usr/bin/supervisord -c /etc/supervisor/supervisord.conf ExecReload=/bin/kill -HUP $MAINPID
+KillMode=process 
+Restart=on-failure 
+RestartSec=10s 
+[Install]
+WantedBy=multi-user.target
+(Make sure the ExecStart path points to the correct location of the supervisord binary and the configuration file.)
+
+sudo systemctl daemon-reload 
+sudo systemctl enable supervisord
+sudo systemctl start supervisord
