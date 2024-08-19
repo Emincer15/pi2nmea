@@ -1,12 +1,13 @@
 from pyais.encode import encode_dict
+import serial
 data = {
     "type" : 1,
     "mmsi":338338338,
     "status" : 0,
     "turn" :0,
     "speed" :0,
-    "lon" : -70.67,
-    "lat" : 42.52,
+    "lon" : -70.672167,
+    "lat" : 41.524268,
     "course" : 3600,
     "heading" : 359,
     "second" : 59,
@@ -14,3 +15,6 @@ data = {
 }
 encoded=encode_dict(data,talker_id="AIVDM")
 print(encoded)
+
+ser=serial.Serial('/dev/ttyS0',38400)
+ser.write((bytes(encoded[0]+"\r\n",'utf-8')))
