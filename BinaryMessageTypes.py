@@ -3,7 +3,8 @@ import attr
 import datetime
 
 @attr.s(slots=True)
-class MessageType_IM0289(messages.Payload):
+class MessageType_IMO289(messages.Payload):
+    # this has all the info: https://vislab-ccom.unh.edu/~schwehr/papers/2010-IMO-SN.1-Circ.289.pdf
     MLID=messages.bit_field(width=10,d_type=int,default=0)
     ND=messages.bit_field(width=7,d_type=int,default=2)
     Month=messages.bit_field(width=4,d_type=int, default=datetime.datetime.now().month)
@@ -18,6 +19,6 @@ class MessageType_IM0289(messages.Payload):
     lat = messages.bit_field(width=24, d_type=float, from_converter=messages.from_lat_lon, to_converter=messages.to_lat_lon, default=41.52, signed=True)
     precision=messages.bit_field(width=3,d_type=int,default=4)
     radius=messages.bit_field(width=12,d_type=int, default=4000)
-    spare=messages.bit_field(width=18,d_type=bytes, default=b'')#not sure if this should be 16 or 18
+    spare=messages.bit_field(width=18,d_type=bytes, default=b'')#not sure if this should be 16 or 18. I think 18 but conflicting sources
 
-print(MessageType_IM0289.create())
+# print(MessageType_IMO289.create())

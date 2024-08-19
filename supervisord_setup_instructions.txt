@@ -1,9 +1,3 @@
-to enable serial on py. only need to do once:
-sudo raspi-config
-
-
-supervisord instructions:
-
 sudo nano /etc/supervisor/conf.d/your_script.conf
 (do it in git, not in /etc folder)
 
