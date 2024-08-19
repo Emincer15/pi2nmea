@@ -3,7 +3,7 @@ import attr
 import datetime
 
 @attr.s(slots=True)
-class MessageType6A(messages.Payload):
+class MessageType_IM0289(messages.Payload):
     MLID=messages.bit_field(width=10,d_type=int,default=0)
     ND=messages.bit_field(width=7,d_type=int,default=2)
     Month=messages.bit_field(width=4,d_type=int, default=datetime.datetime.now().month)
@@ -20,4 +20,4 @@ class MessageType6A(messages.Payload):
     radius=messages.bit_field(width=12,d_type=int, default=4000)
     spare=messages.bit_field(width=18,d_type=bytes, default=b'')#not sure if this should be 16 or 18
 
-print(MessageType6A.create())
+print(MessageType_IM0289.create())

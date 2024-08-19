@@ -1,8 +1,8 @@
 from pyais import  encode,util
-from MessageType6A import MessageType6A
+from MessageType_IM0289 import MessageType_IM0289
 
 # 1)
-bits=MessageType6A.create().to_bitarray()
+bits=MessageType_IM0289.create().to_bitarray()
 print(bits)
 bytes=util.bits2bytes(bits)
 data={
