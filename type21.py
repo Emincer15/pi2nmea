@@ -7,6 +7,7 @@ data={
     'type':21,
     'aid_type':28,#from NAVAID TYPES for isolated danger
     'name':"WHALE",
+    'virtual_aid':1,
     "lon": -70.67,#minutes/10000, need to write code to calculate this. I think its multiply lon/lat by 600000. didn't work. will try with regular
     "lat":41.52,#minutes/10000 #need to write code to calculate this
     "seconds":'60',#it wants seconds. for no2 doing 60=not available
