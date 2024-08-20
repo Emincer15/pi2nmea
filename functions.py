@@ -45,7 +45,7 @@ def createmessage(lat,lon):
         "lon": lon,
         "lat":lat,
         'virtual_aid':1,
-        "seconds":'60',
+        "seconds":60,
         "to_bow":0,
         "to_stern":0,
         "to_port":0,
