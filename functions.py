@@ -48,6 +48,7 @@ def createmessage(lat,lon):
         'virtual_aid':1,
         # random second itme
         "seconds":59,
+        # set to zero since virtual aton
         "to_bow":0,
         "to_stern":0,
         "to_port":0,
