@@ -1,3 +1,4 @@
+# NOT ACTUALLY USED IN PRGORAM
 # I created this library to develop type 6 and 8 binary AIS messages. write now I only coded for IM0289. 
 # Usage of the library can be seen in type6.py or type8.py
 from pyais import messages

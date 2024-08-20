@@ -1,6 +1,7 @@
+# NOT ACTUALLY USED IN PRGORAM
 # creating a type six IMO289 message for whale next to woods hole
 from pyais import  encode,util
-from BinaryMessageTypes import MessageType_IMO289
+from experimental_things.BinaryMessageTypes import MessageType_IMO289
 
 # creates message using IMO289 library default values which i set to the values I want. Also converts to bitarray.
 bits=MessageType_IMO289.create().to_bitarray()

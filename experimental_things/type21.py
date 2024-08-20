@@ -1,3 +1,5 @@
+
+# NOT ACTUALLY USED IN PRGORAM
 # creating type 21 test message for whale next to woods hole
 from pyais.encode import encode_dict
 

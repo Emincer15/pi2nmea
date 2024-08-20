@@ -1,4 +1,5 @@
 # Fox's send file. Only thing changed is the three neccessary lines so python doesn't throw an error
+# set to automatically change lat and lon within a small area around woods hole so still visible on map
 import pika
 from pika.exchange_type import ExchangeType
 from datetime import datetime

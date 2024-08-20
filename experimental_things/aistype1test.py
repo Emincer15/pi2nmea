@@ -1,3 +1,4 @@
+# NOT ACTUALLY USED IN PRGORAM
 # This is a code to test a type 1 ais message. It creates a ship near the iselin lab in woods hole
 from pyais.encode import encode_dict
 import serial
