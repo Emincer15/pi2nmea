@@ -46,7 +46,7 @@ def createmessage(lat,lon):
         "lat":lat,
         # to make it a virtual aid
         'virtual_aid':1,
-        # this means seconds aren't known
+        # random second itme
         "seconds":59,
         "to_bow":0,
         "to_stern":0,
