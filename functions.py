@@ -44,8 +44,10 @@ def createmessage(lat,lon):
         'name':"WHALE",
         "lon": lon,
         "lat":lat,
+        # to make it a virtual aid
         'virtual_aid':1,
-        "seconds":60,
+        # this means seconds aren't known
+        "seconds":59,
         "to_bow":0,
         "to_stern":0,
         "to_port":0,
