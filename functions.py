@@ -39,15 +39,17 @@ def createmessage(lat,lon):
     data={
         "mmsi": 993338338,
         'type':21,
+        'repeat':3,
         'aid_type':28,#from NAVAID TYPES for isolated danger
         'name':"WHALE",
         "lon": lon,
         "lat":lat,
+        'virtual_aid':1,
         "seconds":'60',
-        "to_bow":'1000',
-        "to_stern":'1000',
-        "to_port":'1000',
-        "to_starboard":'1000'
+        "to_bow":0,
+        "to_stern":0,
+        "to_port":0,
+        "to_starboard":0,
     }
     # feed data dictionary into pyais encoding function
     encoded = encode_dict(data, talker_id="AIVDM")
