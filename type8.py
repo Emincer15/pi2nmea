@@ -1,3 +1,4 @@
+# for comments look at type6.py. slight differences in data field here but the rest the same
 from pyais import  encode, util
 from BinaryMessageTypes import MessageType_IMO289
 

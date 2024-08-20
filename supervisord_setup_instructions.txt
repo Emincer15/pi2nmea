@@ -1,3 +1,5 @@
+instructions to set up supervisord on pi
+
 sudo nano /etc/supervisor/conf.d/your_script.conf
 (do it in git, not in /etc folder)
 

@@ -1,3 +1,5 @@
+# This is fox's file to receive rabbitmq data that I edited to send the message on received by calling my functions
+# everything I added is in the on_message_received function
 import pika
 from pika.exchange_type import ExchangeType
 from datetime import datetime
@@ -29,11 +31,11 @@ cfg.rbmq_queue = 'ais_broadcast'
 
 # this is the callback that will run everytime your receive a message, your processing code goes here
 def on_message_received(ch, method, properties, body):
-    # print(f"received new message: {body}")
-    # do some work, send nmea broadcast
+    # call functions to send message
     lat,lon=functions.getlatlon(body)
     message=functions.createmessage(lat,lon)
     functions.sendmessage(message)
+
     # # acknowledge msg on succe, uncomment for debugging so you can read the same message again and again
     channel.basic_ack(method.delivery_tag)
 
